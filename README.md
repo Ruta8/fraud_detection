@@ -1,11 +1,11 @@
 # Fraud Detection Take Home Challenge
 
-Highly imbalanced binary classification problem with messy data. The goal is to predict possibly high value fraudulent transactions. Feature engineering was centered around time-aware RFM-style features. The model of choice was Random Forest for great performance, moderate interpretability, ability to deal with large dimensionality. Loss function modified to take into account fraud value. Model calibrated using Beta Calibration.
+Highly imbalanced binary classification problem with messy data. The goal is to predict possibly high-value fraudulent transactions. Feature engineering was centred around time-aware RFM-style features. The model of choice was Random Forest for great performance, moderate interpretability, ability to deal with the large dimensionality. Loss function modified to take into account fraud value. The model was calibrated using Beta Calibration.
 
 ## Folder Structure
 
 ```
-├── analysis.ipynb <- A Jupyter notebook with exploratory data analysis.              
+├── analysis.ipynb <- A Jupyter notebook with exploratory data analysis and model results analysis.             
 ├── data
 │   ├── external                    <- Data from third party sources.
 │   ├── processed                   <- The final, canonical data sets for modeling.
@@ -39,20 +39,17 @@ The first type of transformation involves the date/time variable and consists in
 
 The second type of transformation involved the account_number column and features that characterize the account spending behaviors. Here I follow the RFM (Recency, Frequency, Monetary value) framework proposed by [Vlasselaer (2015)](https://www.sciencedirect.com/science/article/abs/pii/S0167923615000846)
 
-The third type of transformation involves the merchant_id column and creates new features that characterize the ‘risk’ associated with the merchant. 
+The third type of transformation involves the merchant_id column and creates new features that characterize the 'risk' associated with the merchant. 
 
 ## Model Choice
 There are lots of high cardinality categorical features in this data set, leading to high
-dimensionality (under one hot encoding), so I will use Random Forest classifier.
-This models work well in high dimensional spaces, and deals with categorical inputs in quite a 
+dimensionality (under one-hot encoding), so I will use Random Forest classifier.
+This models work well in high dimensional spaces and deals with categorical inputs in quite a 
 natural way.
 
 ## Training, validation and test sets
 
 Because the task asks to provide a probabilistic model with a classification threshold that in a given 
 month predicts 400 positive cases (as that is how many cases the fraud team can handle in a month)
-and because we have 13 months of data (2017/01/01 - 2018/01/31), test_size will be set to 1/13 so
-that we can have a reasonable performance estimate over 'the average month'. This will allow us 
-to choose a classification threshold that produces up to 400 positive predictions and hence aligns
-to the business use case. The instruction would be to present fraud analysts those samples which 
-have a higher probability than the probability threshold selected.
+and because we have 13 months of data (2017/01/01 - 2018/01/31), test_size will be set to 1/13 to have a reasonable performance estimate over 'the average month'. This will allow us to choose a classification threshold that produces up to 400 positive predictions and aligns
+with the business use case. The instruction would be to present fraud analysts those samples which have a higher probability than the probability threshold selected.
