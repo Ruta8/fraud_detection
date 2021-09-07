@@ -1,0 +1,915 @@
+mcc,mcc_industry
+5530,Retail Outlet Services
+5531,Retail Outlet Services
+742,Agricultural Services
+763,Agricultural Services
+780,Agricultural Services
+1520,Contracted Services
+1711,Contracted Services
+1731,Contracted Services
+1740,Contracted Services
+1750,Contracted Services
+1761,Contracted Services
+1771,Contracted Services
+1799,Contracted Services
+2741,Contracted Services
+2791,Contracted Services
+2842,Contracted Services
+4011,Transportation Services
+4111,Transportation Services
+4112,Transportation Services
+4119,Transportation Services
+4121,Transportation Services
+4131,Transportation Services
+4214,Transportation Services
+4215,Transportation Services
+4225,Transportation Services
+4411,Transportation Services
+4457,Transportation Services
+4468,Transportation Services
+4511,Transportation Services
+4582,Transportation Services
+4722,Transportation Services
+4723,Transportation Services
+4761,Transportation Services
+4784,Transportation Services
+4789,Transportation Services
+4812,Utility Services
+4813,Utility Services
+4814,Utility Services
+4816,Utility Services
+4821,Utility Services
+4829,Utility Services
+4899,Utility Services
+4900,Utility Services
+5013,Retail Outlet Services
+5021,Retail Outlet Services
+5039,Retail Outlet Services
+5044,Retail Outlet Services
+5045,Retail Outlet Services
+5046,Retail Outlet Services
+5047,Retail Outlet Services
+5051,Retail Outlet Services
+5065,Retail Outlet Services
+5072,Retail Outlet Services
+5074,Retail Outlet Services
+5085,Retail Outlet Services
+5094,Retail Outlet Services
+5099,Retail Outlet Services
+5111,Retail Outlet Services
+5122,Retail Outlet Services
+5131,Retail Outlet Services
+5137,Retail Outlet Services
+5139,Retail Outlet Services
+5169,Retail Outlet Services
+5172,Retail Outlet Services
+5192,Retail Outlet Services
+5193,Retail Outlet Services
+5198,Retail Outlet Services
+5199,Retail Outlet Services
+5200,Retail Outlet Services
+5211,Retail Outlet Services
+5231,Retail Outlet Services
+5251,Retail Outlet Services
+5261,Retail Outlet Services
+5271,Retail Outlet Services
+5299,Retail Outlet Services
+5300,Retail Outlet Services
+5309,Retail Outlet Services
+5310,Retail Outlet Services
+5311,Retail Outlet Services
+5331,Retail Outlet Services
+5399,Retail Outlet Services
+5411,Retail Outlet Services
+5422,Retail Outlet Services
+5441,Retail Outlet Services
+5451,Retail Outlet Services
+5462,Retail Outlet Services
+5499,Retail Outlet Services
+5511,Retail Outlet Services
+5521,Retail Outlet Services
+5532,Retail Outlet Services
+5533,Retail Outlet Services
+5541,Retail Outlet Services
+5542,Retail Outlet Services
+5551,Retail Outlet Services
+5561,Retail Outlet Services
+5571,Retail Outlet Services
+5592,Retail Outlet Services
+5598,Retail Outlet Services
+5599,Retail Outlet Services
+5611,Clothing Stores
+5621,Clothing Stores
+5631,Clothing Stores
+5641,Clothing Stores
+5651,Clothing Stores
+5655,Clothing Stores
+5661,Clothing Stores
+5681,Clothing Stores
+5691,Clothing Stores
+5697,Clothing Stores
+5698,Clothing Stores
+5699,Clothing Stores
+5712,Miscellaneous Stores
+5713,Miscellaneous Stores
+5714,Miscellaneous Stores
+5718,Miscellaneous Stores
+5719,Miscellaneous Stores
+5722,Miscellaneous Stores
+5732,Miscellaneous Stores
+5733,Miscellaneous Stores
+5734,Miscellaneous Stores
+5735,Miscellaneous Stores
+5811,Miscellaneous Stores
+5812,Miscellaneous Stores
+5813,Miscellaneous Stores
+5814,Miscellaneous Stores
+5815,Miscellaneous Stores
+5816,Miscellaneous Stores
+5817,Miscellaneous Stores
+5818,Miscellaneous Stores
+5912,Miscellaneous Stores
+5921,Miscellaneous Stores
+5931,Miscellaneous Stores
+5932,Miscellaneous Stores
+5933,Miscellaneous Stores
+5935,Miscellaneous Stores
+5937,Miscellaneous Stores
+5940,Miscellaneous Stores
+5941,Miscellaneous Stores
+5942,Miscellaneous Stores
+5943,Miscellaneous Stores
+5944,Miscellaneous Stores
+5945,Miscellaneous Stores
+5946,Miscellaneous Stores
+5947,Miscellaneous Stores
+5948,Miscellaneous Stores
+5949,Miscellaneous Stores
+5950,Miscellaneous Stores
+5960,Miscellaneous Stores
+5961,Miscellaneous Stores
+5962,Miscellaneous Stores
+5963,Miscellaneous Stores
+5964,Miscellaneous Stores
+5965,Miscellaneous Stores
+5966,Miscellaneous Stores
+5967,Miscellaneous Stores
+5968,Miscellaneous Stores
+5969,Miscellaneous Stores
+5970,Miscellaneous Stores
+5971,Miscellaneous Stores
+5972,Miscellaneous Stores
+5973,Miscellaneous Stores
+5974,Miscellaneous Stores
+5975,Miscellaneous Stores
+5976,Miscellaneous Stores
+5977,Miscellaneous Stores
+5978,Miscellaneous Stores
+5983,Miscellaneous Stores
+5992,Miscellaneous Stores
+5993,Miscellaneous Stores
+5994,Miscellaneous Stores
+5995,Miscellaneous Stores
+5996,Miscellaneous Stores
+5997,Miscellaneous Stores
+5998,Miscellaneous Stores
+5999,Miscellaneous Stores
+6010,Miscellaneous Stores
+6011,Miscellaneous Stores
+6012,Miscellaneous Stores
+6050,Miscellaneous Stores
+6051,Miscellaneous Stores
+6211,Miscellaneous Stores
+6236,Miscellaneous Stores
+6300,Miscellaneous Stores
+6381,Miscellaneous Stores
+6513,Miscellaneous Stores
+6529,Miscellaneous Stores
+6530,Miscellaneous Stores
+6535,Miscellaneous Stores
+6536,Miscellaneous Stores
+6537,Miscellaneous Stores
+6538,Miscellaneous Stores
+6539,Miscellaneous Stores
+6540,Miscellaneous Stores
+6611,Miscellaneous Stores
+6760,Miscellaneous Stores
+7011,Miscellaneous Stores
+7012,Miscellaneous Stores
+7032,Miscellaneous Stores
+7033,Miscellaneous Stores
+7210,Miscellaneous Stores
+7211,Miscellaneous Stores
+7216,Miscellaneous Stores
+7217,Miscellaneous Stores
+7221,Miscellaneous Stores
+7230,Miscellaneous Stores
+7251,Miscellaneous Stores
+7261,Miscellaneous Stores
+7273,Miscellaneous Stores
+7276,Miscellaneous Stores
+7277,Miscellaneous Stores
+7278,Miscellaneous Stores
+7280,Miscellaneous Stores
+7295,Miscellaneous Stores
+7296,Miscellaneous Stores
+7297,Miscellaneous Stores
+7298,Miscellaneous Stores
+7299,Miscellaneous Stores
+7311,Business Services
+7321,Business Services
+7332,Business Services
+7333,Business Services
+7338,Business Services
+7339,Business Services
+7342,Business Services
+7349,Business Services
+7361,Business Services
+7372,Business Services
+7375,Business Services
+7379,Business Services
+7392,Business Services
+7393,Business Services
+7394,Business Services
+7395,Business Services
+7399,Business Services
+7512,Business Services
+7513,Business Services
+7519,Business Services
+7523,Business Services
+7524,Business Services
+7531,Business Services
+7534,Business Services
+7535,Business Services
+7538,Business Services
+7542,Business Services
+7549,Business Services
+7622,Business Services
+7623,Business Services
+7629,Business Services
+7631,Business Services
+7641,Business Services
+7692,Business Services
+7699,Business Services
+7800,Business Services
+7801,Business Services
+7802,Business Services
+7829,Business Services
+7832,Business Services
+7833,Business Services
+7841,Business Services
+7911,Business Services
+7922,Business Services
+7929,Business Services
+7932,Business Services
+7933,Business Services
+7941,Business Services
+7991,Business Services
+7992,Business Services
+7993,Business Services
+7994,Business Services
+7995,Business Services
+7996,Business Services
+7997,Business Services
+7998,Business Services
+7999,Business Services
+8011,Professional Services and Membership Organizations
+8021,Professional Services and Membership Organizations
+8031,Professional Services and Membership Organizations
+8041,Professional Services and Membership Organizations
+8042,Professional Services and Membership Organizations
+8043,Professional Services and Membership Organizations
+8044,Professional Services and Membership Organizations
+8049,Professional Services and Membership Organizations
+8050,Professional Services and Membership Organizations
+8062,Professional Services and Membership Organizations
+8071,Professional Services and Membership Organizations
+8099,Professional Services and Membership Organizations
+8111,Professional Services and Membership Organizations
+8211,Professional Services and Membership Organizations
+8220,Professional Services and Membership Organizations
+8241,Professional Services and Membership Organizations
+8244,Professional Services and Membership Organizations
+8249,Professional Services and Membership Organizations
+8299,Professional Services and Membership Organizations
+8351,Professional Services and Membership Organizations
+8398,Professional Services and Membership Organizations
+8641,Professional Services and Membership Organizations
+8651,Professional Services and Membership Organizations
+8661,Professional Services and Membership Organizations
+8675,Professional Services and Membership Organizations
+8699,Professional Services and Membership Organizations
+8734,Professional Services and Membership Organizations
+8743,Professional Services and Membership Organizations
+8911,Professional Services and Membership Organizations
+8931,Professional Services and Membership Organizations
+8999,Professional Services and Membership Organizations
+9034,Government Services
+9211,Government Services
+9222,Government Services
+9223,Government Services
+9311,Government Services
+9399,Government Services
+9401,Government Services
+9402,Government Services
+9405,Government Services
+9700,Government Services
+9701,Government Services
+9702,Government Services
+9751,Government Services
+9752,Government Services
+9754,Government Services
+9950,Government Services
+3000,Airlines
+3001,Airlines
+3002,Airlines
+3003,Airlines
+3004,Airlines
+3005,Airlines
+3006,Airlines
+3007,Airlines
+3008,Airlines
+3009,Airlines
+3010,Airlines
+3011,Airlines
+3012,Airlines
+3013,Airlines
+3014,Airlines
+3015,Airlines
+3016,Airlines
+3017,Airlines
+3018,Airlines
+3019,Airlines
+3020,Airlines
+3021,Airlines
+3022,Airlines
+3023,Airlines
+3024,Airlines
+3025,Airlines
+3026,Airlines
+3027,Airlines
+3028,Airlines
+3029,Airlines
+3030,Airlines
+3031,Airlines
+3032,Airlines
+3033,Airlines
+3034,Airlines
+3035,Airlines
+3036,Airlines
+3037,Airlines
+3038,Airlines
+3039,Airlines
+3040,Airlines
+3041,Airlines
+3042,Airlines
+3043,Airlines
+3044,Airlines
+3045,Airlines
+3046,Airlines
+3047,Airlines
+3048,Airlines
+3049,Airlines
+3050,Airlines
+3051,Airlines
+3052,Airlines
+3053,Airlines
+3054,Airlines
+3055,Airlines
+3056,Airlines
+3057,Airlines
+3058,Airlines
+3059,Airlines
+3060,Airlines
+3061,Airlines
+3062,Airlines
+3063,Airlines
+3064,Airlines
+3066,Airlines
+3067,Airlines
+3068,Airlines
+3069,Airlines
+3071,Airlines
+3072,Airlines
+3075,Airlines
+3076,Airlines
+3077,Airlines
+3078,Airlines
+3079,Airlines
+3081,Airlines
+3082,Airlines
+3083,Airlines
+3084,Airlines
+3085,Airlines
+3086,Airlines
+3087,Airlines
+3088,Airlines
+3089,Airlines
+3090,Airlines
+3094,Airlines
+3096,Airlines
+3097,Airlines
+3098,Airlines
+3099,Airlines
+3100,Airlines
+3102,Airlines
+3103,Airlines
+3106,Airlines
+3110,Airlines
+3111,Airlines
+3112,Airlines
+3115,Airlines
+3117,Airlines
+3118,Airlines
+3125,Airlines
+3126,Airlines
+3127,Airlines
+3129,Airlines
+3130,Airlines
+3131,Airlines
+3132,Airlines
+3133,Airlines
+3135,Airlines
+3136,Airlines
+3137,Airlines
+3138,Airlines
+3143,Airlines
+3144,Airlines
+3145,Airlines
+3146,Airlines
+3148,Airlines
+3151,Airlines
+3154,Airlines
+3156,Airlines
+3159,Airlines
+3161,Airlines
+3164,Airlines
+3165,Airlines
+3167,Airlines
+3170,Airlines
+3171,Airlines
+3172,Airlines
+3174,Airlines
+3175,Airlines
+3176,Airlines
+3177,Airlines
+3178,Airlines
+3180,Airlines
+3181,Airlines
+3182,Airlines
+3183,Airlines
+3184,Airlines
+3185,Airlines
+3186,Airlines
+3187,Airlines
+3188,Airlines
+3190,Airlines
+3191,Airlines
+3193,Airlines
+3196,Airlines
+3197,Airlines
+3200,Airlines
+3203,Airlines
+3204,Airlines
+3206,Airlines
+3211,Airlines
+3212,Airlines
+3213,Airlines
+3215,Airlines
+3216,Airlines
+3217,Airlines
+3218,Airlines
+3219,Airlines
+3220,Airlines
+3221,Airlines
+3222,Airlines
+3223,Airlines
+3226,Airlines
+3228,Airlines
+3231,Airlines
+3233,Airlines
+3234,Airlines
+3235,Airlines
+3236,Airlines
+3238,Airlines
+3239,Airlines
+3240,Airlines
+3241,Airlines
+3242,Airlines
+3243,Airlines
+3245,Airlines
+3246,Airlines
+3247,Airlines
+3248,Airlines
+3251,Airlines
+3252,Airlines
+3253,Airlines
+3254,Airlines
+3256,Airlines
+3259,Airlines
+3260,Airlines
+3261,Airlines
+3262,Airlines
+3263,Airlines
+3266,Airlines
+3267,Airlines
+3273,Airlines
+3274,Airlines
+3280,Airlines
+3281,Airlines
+3282,Airlines
+3284,Airlines
+3285,Airlines
+3286,Airlines
+3287,Airlines
+3292,Airlines
+3293,Airlines
+3294,Airlines
+3295,Airlines
+3296,Airlines
+3297,Airlines
+3298,Airlines
+3299,Airlines
+3351,Car Rentals
+3352,Car Rentals
+3353,Car Rentals
+3354,Car Rentals
+3355,Car Rentals
+3357,Car Rentals
+3359,Car Rentals
+3360,Car Rentals
+3361,Car Rentals
+3362,Car Rentals
+3364,Car Rentals
+3366,Car Rentals
+3368,Car Rentals
+3370,Car Rentals
+3374,Car Rentals
+3376,Car Rentals
+3380,Car Rentals
+3381,Car Rentals
+3385,Car Rentals
+3386,Car Rentals
+3387,Car Rentals
+3388,Car Rentals
+3389,Car Rentals
+3390,Car Rentals
+3391,Car Rentals
+3393,Car Rentals
+3394,Car Rentals
+3395,Car Rentals
+3396,Car Rentals
+3398,Car Rentals
+3400,Car Rentals
+3405,Car Rentals
+3409,Car Rentals
+3412,Car Rentals
+3414,Car Rentals
+3420,Car Rentals
+3421,Car Rentals
+3423,Car Rentals
+3425,Car Rentals
+3427,Car Rentals
+3428,Car Rentals
+3429,Car Rentals
+3430,Car Rentals
+3431,Car Rentals
+3432,Car Rentals
+3433,Car Rentals
+3434,Car Rentals
+3435,Car Rentals
+3436,Car Rentals
+3437,Car Rentals
+3438,Car Rentals
+3439,Car Rentals
+3441,Car Rentals
+3780,Lodging
+3501,Lodging
+3502,Lodging
+3503,Lodging
+3504,Lodging
+3505,Lodging
+3506,Lodging
+3507,Lodging
+3508,Lodging
+3509,Lodging
+3510,Lodging
+3511,Lodging
+3512,Lodging
+3513,Lodging
+3514,Lodging
+3515,Lodging
+3516,Lodging
+3517,Lodging
+3518,Lodging
+3519,Lodging
+3520,Lodging
+3521,Lodging
+3522,Lodging
+3523,Lodging
+3524,Lodging
+3525,Lodging
+3526,Lodging
+3527,Lodging
+3528,Lodging
+3529,Lodging
+3530,Lodging
+3531,Lodging
+3532,Lodging
+3533,Lodging
+3534,Lodging
+3535,Lodging
+3536,Lodging
+3537,Lodging
+3538,Lodging
+3539,Lodging
+3540,Lodging
+3541,Lodging
+3542,Lodging
+3543,Lodging
+3544,Lodging
+3545,Lodging
+3546,Lodging
+3547,Lodging
+3548,Lodging
+3549,Lodging
+3550,Lodging
+3551,Lodging
+3552,Lodging
+3553,Lodging
+3554,Lodging
+3555,Lodging
+3556,Lodging
+3557,Lodging
+3558,Lodging
+3559,Lodging
+3560,Lodging
+3561,Lodging
+3562,Lodging
+3563,Lodging
+3564,Lodging
+3565,Lodging
+3566,Lodging
+3567,Lodging
+3568,Lodging
+3569,Lodging
+3570,Lodging
+3571,Lodging
+3572,Lodging
+3573,Lodging
+3574,Lodging
+3575,Lodging
+3576,Lodging
+3577,Lodging
+3578,Lodging
+3579,Lodging
+3580,Lodging
+3581,Lodging
+3582,Lodging
+3583,Lodging
+3584,Lodging
+3585,Lodging
+3586,Lodging
+3587,Lodging
+3588,Lodging
+3589,Lodging
+3590,Lodging
+3591,Lodging
+3592,Lodging
+3593,Lodging
+3594,Lodging
+3595,Lodging
+3596,Lodging
+3597,Lodging
+3598,Lodging
+3599,Lodging
+3600,Lodging
+3601,Lodging
+3602,Lodging
+3603,Lodging
+3604,Lodging
+3605,Lodging
+3606,Lodging
+3607,Lodging
+3608,Lodging
+3609,Lodging
+3610,Lodging
+3611,Lodging
+3612,Lodging
+3613,Lodging
+3614,Lodging
+3615,Lodging
+3616,Lodging
+3617,Lodging
+3618,Lodging
+3619,Lodging
+3620,Lodging
+3621,Lodging
+3622,Lodging
+3623,Lodging
+3624,Lodging
+3625,Lodging
+3626,Lodging
+3627,Lodging
+3628,Lodging
+3629,Lodging
+3630,Lodging
+3631,Lodging
+3632,Lodging
+3633,Lodging
+3634,Lodging
+3635,Lodging
+3636,Lodging
+3637,Lodging
+3638,Lodging
+3639,Lodging
+3640,Lodging
+3641,Lodging
+3642,Lodging
+3643,Lodging
+3644,Lodging
+3645,Lodging
+3646,Lodging
+3647,Lodging
+3648,Lodging
+3649,Lodging
+3650,Lodging
+3651,Lodging
+3652,Lodging
+3653,Lodging
+3654,Lodging
+3655,Lodging
+3656,Lodging
+3657,Lodging
+3658,Lodging
+3659,Lodging
+3660,Lodging
+3661,Lodging
+3662,Lodging
+3663,Lodging
+3664,Lodging
+3665,Lodging
+3666,Lodging
+3667,Lodging
+3668,Lodging
+3669,Lodging
+3670,Lodging
+3671,Lodging
+3672,Lodging
+3673,Lodging
+3674,Lodging
+3675,Lodging
+3676,Lodging
+3677,Lodging
+3678,Lodging
+3679,Lodging
+3680,Lodging
+3681,Lodging
+3682,Lodging
+3683,Lodging
+3684,Lodging
+3685,Lodging
+3686,Lodging
+3687,Lodging
+3688,Lodging
+3689,Lodging
+3690,Lodging
+3691,Lodging
+3692,Lodging
+3693,Lodging
+3694,Lodging
+3695,Lodging
+3696,Lodging
+3697,Lodging
+3698,Lodging
+3699,Lodging
+3700,Lodging
+3701,Lodging
+3702,Lodging
+3703,Lodging
+3704,Lodging
+3705,Lodging
+3706,Lodging
+3707,Lodging
+3708,Lodging
+3709,Lodging
+3710,Lodging
+3711,Lodging
+3712,Lodging
+3713,Lodging
+3714,Lodging
+3715,Lodging
+3716,Lodging
+3717,Lodging
+3718,Lodging
+3719,Lodging
+3720,Lodging
+3721,Lodging
+3722,Lodging
+3723,Lodging
+3724,Lodging
+3725,Lodging
+3726,Lodging
+3727,Lodging
+3728,Lodging
+3729,Lodging
+3730,Lodging
+3731,Lodging
+3732,Lodging
+3733,Lodging
+3734,Lodging
+3735,Lodging
+3736,Lodging
+3737,Lodging
+3738,Lodging
+3739,Lodging
+3740,Lodging
+3741,Lodging
+3742,Lodging
+3743,Lodging
+3744,Lodging
+3745,Lodging
+3746,Lodging
+3747,Lodging
+3748,Lodging
+3749,Lodging
+3750,Lodging
+3751,Lodging
+3752,Lodging
+3753,Lodging
+3754,Lodging
+3755,Lodging
+3757,Lodging
+3758,Lodging
+3759,Lodging
+3760,Lodging
+3761,Lodging
+3762,Lodging
+3763,Lodging
+3764,Lodging
+3765,Lodging
+3766,Lodging
+3767,Lodging
+3768,Lodging
+3769,Lodging
+3770,Lodging
+3771,Lodging
+3772,Lodging
+3773,Lodging
+3774,Lodging
+3775,Lodging
+3776,Lodging
+3777,Lodging
+3778,Lodging
+3779,Lodging
+3781,Lodging
+3782,Lodging
+3783,Lodging
+3784,Lodging
+3785,Lodging
+3786,Lodging
+3787,Lodging
+3788,Lodging
+3789,Lodging
+3790,Lodging
+3791,Lodging
+3792,Lodging
+3793,Lodging
+3794,Lodging
+3795,Lodging
+3796,Lodging
+3797,Lodging
+3798,Lodging
+3799,Lodging
+3800,Lodging
+3801,Lodging
+3802,Lodging
+3803,Lodging
+3804,Lodging
+3805,Lodging
+3806,Lodging
+3807,Lodging
+3808,Lodging
+3809,Lodging
+3810,Lodging
+3811,Lodging
+3812,Lodging
+3813,Lodging
+3814,Lodging
+3815,Lodging
+3816,Lodging
+3817,Lodging
+3818,Lodging
+3819,Lodging
+3820,Lodging
+3821,Lodging
+3822,Lodging
+3823,Lodging
+3824,Lodging
+3825,Lodging
+3826,Lodging
+3827,Lodging
+3828,Lodging
+3829,Lodging
+3830,Lodging
+3831,Lodging
