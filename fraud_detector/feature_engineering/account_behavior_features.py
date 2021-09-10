@@ -9,6 +9,22 @@ def add_account_spending_behaviour_features(
     transaction_amount_col_name: str,
     unique_transaction_id_col_name: str,
 ) -> pd.DataFrame:
+    """Adds features that describe account spending behaviour. 
+    The first half of the features describe the number of transactions by the customer in the
+    last n day(s), for n in windows_size_in_days. The second half of the feature describes the
+    average spending amount in the last n day(s), for n in windows_size_in_days.
+
+    Args:
+        account_transactions (pd.DataFrame): a set of transactions for an account number.
+        windows_size_in_days (list):  a list of integer values representing a number of days for window size.
+        transaction_time_col_name (str): non-local transaction time column name.
+        transaction_amount_col_name (str): a column containing transaction amounts.
+        unique_transaction_id_col_name (str): a column containing unique transaction ids.
+
+    Returns:
+        pd.DataFrame: data frame for an account number with additional features.
+        The number of features is equal to windows_size_in_days x 2.
+    """
 
     account_transactions = account_transactions.sort_values(transaction_time_col_name)
     account_transactions.index = account_transactions[transaction_time_col_name]
@@ -49,6 +65,17 @@ def add_transaction_stats_features(
     transaction_amount_col_name: str,
     transaction_time_col_name: str,
 ) -> pd.DataFrame:
+    """The function takes as inputs the set of transactions for an account number.
+    The function returns five new statistical features, calculated based on the transaction amount.
+
+    Args:
+        account_transactions (pd.DataFrame): a set of transactions for an account number.
+        transaction_amount_col_name (str): a column containing transaction amounts.
+        transaction_time_col_name (str): non-local transaction time column name.
+
+    Returns:
+        pd.DataFrame: data frame for an account number with 5 additional features.
+    """
 
     account_transactions = account_transactions.sort_values(transaction_time_col_name)
     account_transactions["mean_transaction_amount"] = (
@@ -81,8 +108,18 @@ def add_transaction_time_diff_features(
     transaction_time_col_name: str,
     unique_transaction_id_col_name: str,
 ) -> pd.DataFrame:
+    """The function takes as inputs the set of transactions for an account number. 
+    It returns a data frame with the five new statistical features, based on transaction time.
 
-    
+    Args:
+        account_transactions (pd.DataFrame): a set of transactions for an account number.
+        transaction_time_col_name (str): non-local transaction time column name.
+        unique_transaction_id_col_name (str): a column containing unique transaction ids.
+
+    Returns:
+        pd.DataFrame: data frame for an account number with 5 additional features.
+    """
+
     account_transactions = account_transactions.sort_values(transaction_time_col_name)
     account_transactions["transaction_hours_diff"] = (
         account_transactions[transaction_time_col_name].diff().dt.total_seconds()

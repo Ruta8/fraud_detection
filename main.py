@@ -16,11 +16,8 @@ from fraud_detector.data_cleaning.clean_data import (
 
 
 from fraud_detector.feature_engineering.time_features import (
-    add_label,
     add_localized_transaction_time,
-    add_localized_transaction_time_features,
-    add_reported_time_features,
-    add_transaction_time_features,
+    add_time_property_features,
 )
 
 
@@ -36,10 +33,7 @@ from fraud_detector.feature_engineering.merchant_features import (
 )
 
 
-from fraud_detector.feature_engineering.other import (
-    fill_categorical_column_na,
-    reduce_feature_cardinality,
-)
+from fraud_detector.feature_engineering.other import reduce_feature_cardinality
 
 
 from fraud_detector.modeling.modeling import (
@@ -83,14 +77,17 @@ def main(randomized_search=False):
     ]
     df = df[df.transaction_amount > 0]
 
-    df = add_label(df, "label", "reported_time")
+    df["label"] = [1 if pd.notnull(x) else 0 for x in df["reported_time"]]
+
     df = add_localized_transaction_time(df, "transaction_time")
-    df = add_localized_transaction_time_features(
-        df, ["day", "hour", "month"], "localized_transaction_time"
+    df = add_time_property_features(
+        df, ["day", "hour", "month"], "localized_transaction_time", "local"
     )
-    df = add_reported_time_features(df, ["date"], "reported_time")
-    df = add_transaction_time_features(df, ["date"], "transaction_time")
-    df = fill_categorical_column_na(df)
+    df = add_time_property_features(df, ["date"], "reported_time", "reported")
+    df = add_time_property_features(df, ["date"], "transaction_time", "transaction")
+
+    categorical_features = df.select_dtypes(include="object").columns
+    df[categorical_features] = df[categorical_features].fillna("missing_value")
 
     df = df.groupby("account_number").apply(
         lambda account_transactions: add_account_spending_behaviour_features(
@@ -105,18 +102,14 @@ def main(randomized_search=False):
 
     df = df.groupby("account_number").apply(
         lambda account_transactions: add_transaction_stats_features(
-            account_transactions,
-            "transaction_amount",
-            "transaction_time",
+            account_transactions, "transaction_amount", "transaction_time",
         )
     )
     df = df.sort_values("transaction_time").reset_index(drop=True)
 
     df = df.groupby("account_number").apply(
         lambda account_transactions: add_transaction_time_diff_features(
-            account_transactions,
-            "transaction_time",
-            "event_id",
+            account_transactions, "transaction_time", "event_id",
         )
     )
     df = df.sort_values("transaction_time").reset_index(drop=True)
@@ -182,13 +175,7 @@ def main(randomized_search=False):
             {
                 "model__max_depth": list(np.random.randint(3, 100, 1000)),
                 "model__n_estimators": list(np.random.randint(100, 800, 1000)),
-                "model__min_samples_split": [
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                ],
+                "model__min_samples_split": [2, 3, 4, 5, 6,],
                 "model__max_features": ["auto", "sqrt", "log2"],
                 "model__min_samples_leaf": [1, 2, 4, 6],
                 "model__criterion": ["gini", "entropy"],
@@ -199,8 +186,7 @@ def main(randomized_search=False):
             3,
         )
         with open(
-            "./fraud_detector/models/randomized_search_model.pkl",
-            "wb",
+            "./fraud_detector/models/randomized_search_model.pkl", "wb",
         ) as handle:
             pickle.dump(randomized_search_model, handle)
 
@@ -224,10 +210,7 @@ def main(randomized_search=False):
     rf_model.fit(
         X_train.drop(columns=["sample_weight"]), y_train, X_train.sample_weight
     )
-    with open(
-        "./fraud_detector/models/rf_model.pkl",
-        "wb",
-    ) as handle:
+    with open("./fraud_detector/models/rf_model.pkl", "wb",) as handle:
         pickle.dump(rf_model, handle)
 
     uncalibrated_val_predictions = rf_model.predict_proba(
@@ -236,10 +219,7 @@ def main(randomized_search=False):
 
     calibrated_rf_model = BetaCalibration(parameters="abm")
     calibrated_rf_model.fit(uncalibrated_val_predictions, y_val)
-    with open(
-        "./fraud_detector/models/calibrated_rf_model.pkl",
-        "wb",
-    ) as handle:
+    with open("./fraud_detector/models/calibrated_rf_model.pkl", "wb",) as handle:
         pickle.dump(calibrated_rf_model, handle)
 
     calibrated_rf_test_predictions = calibrated_rf_model.predict(

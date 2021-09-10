@@ -1,16 +1,20 @@
 import pandas as pd
 
 
-def fill_categorical_column_na(df: pd.DataFrame) -> pd.DataFrame:
-    categorical_features = df.select_dtypes(include="object").columns
-    df[categorical_features] = df[categorical_features].fillna("missing_value")
-
-    return df
-
-
 def reduce_feature_cardinality(
     df: pd.DataFrame, feature: str, nb_of_categories: int
 ) -> pd.DataFrame:
+    """Reduces cardinality for a feature to the number of categories given.
+
+    Args:
+        df (pd.DataFrame): oridinal dataframe.
+        feature (str): feature name with high cardinality.
+        nb_of_categories (int): number of prefered categories in the high
+        cardinality feature.
+
+    Returns:
+        pd.DataFrame: the same dataframe with the reduced cardinality feature.
+    """
 
     current_nb_of_categories = df[feature].nunique()
     assert (
