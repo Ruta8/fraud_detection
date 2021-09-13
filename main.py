@@ -32,10 +32,6 @@ from fraud_detector.feature_engineering.merchant_features import (
     add_merchant_risk_features,
 )
 
-
-from fraud_detector.feature_engineering.other import reduce_feature_cardinality
-
-
 from fraud_detector.modeling.modeling import (
     evaluate_model,
     choose_threshold,
@@ -81,10 +77,17 @@ def main(randomized_search=False):
 
     df = add_localized_transaction_time(df, "transaction_time")
     df = add_time_property_features(
-        df, ["day", "hour", "month"], "localized_transaction_time", "local"
+        df, ["hour", "quarter", "week"], "localized_transaction_time", "local"
     )
     df = add_time_property_features(df, ["date"], "reported_time", "reported")
     df = add_time_property_features(df, ["date"], "transaction_time", "transaction")
+
+    df["transaction_during_weekend"] = np.where(
+        (df["localized_transaction_time"]).dt.dayofweek >= 5, 1, 0
+    )
+    df["transaction_during_night"] = np.where(
+        (df["localized_transaction_time"]).dt.hour <= 6, 1, 0
+    )
 
     categorical_features = df.select_dtypes(include="object").columns
     df[categorical_features] = df[categorical_features].fillna("missing_value")
@@ -119,26 +122,16 @@ def main(randomized_search=False):
     df["sample_weight"] = np.ceil(df["transaction_amount"]).astype(int)
     df.loc[df["label"] == 0, "sample_weight"] = 1
 
-    df["transaction_during_night"] = np.where(
-        (df["localized_transaction_time"]).dt.hour <= 6, 1, 0
-    )
-    df["flag_fraud_experienced_merchant"] = np.where(
-        df["merchant_risk_score"] > 0, 1, 0
-    )
-
     df[df.select_dtypes(include=[np.number]).columns] = df.select_dtypes(
         include=[np.number]
     ).fillna(0)
-
-    df = reduce_feature_cardinality(df, "mcc", 15)
-    df = reduce_feature_cardinality(df, "merchant_country", 15)
-    df = reduce_feature_cardinality(df, "merchant_zip", 15)
 
     preprocessed_df = df.sort_values("transaction_time").reset_index(drop=True)
     preprocessed_df.to_csv("./data/processed/preprocessed.csv")
 
     preprocessed_df = preprocessed_df.drop(
         columns=[
+            "merchant_zip",
             "transaction_time",
             "event_id",
             "account_number",
@@ -152,21 +145,21 @@ def main(randomized_search=False):
     )
 
     encoded_df = pd.get_dummies(preprocessed_df, drop_first=True)
-    encoded_df.to_csv("./data/processed/encoded_df.csv")
 
     X_train, X_test, y_train, y_test = train_test_split(
         encoded_df.drop(columns=["label"]),
         encoded_df.label,
         test_size=1 / 13,
         stratify=encoded_df.label,
-        random_state=42,
+        random_state=2,
     )
     X_train, X_val, y_train, y_val = train_test_split(
-        X_train, y_train, test_size=1 / 12, stratify=y_train, random_state=42
+        X_train, y_train, test_size=0.2, stratify=y_train, random_state=2
     )
 
     if randomized_search == True:
         print(f"Performing randomized search for hyperparameters.")
+
         randomized_search_model = perform_randomized_search(
             RandomForestClassifier(),
             X_train.drop(columns=["sample_weight"]),
@@ -190,14 +183,29 @@ def main(randomized_search=False):
         ) as handle:
             pickle.dump(randomized_search_model, handle)
 
+        best_params = {
+            "max_depth": randomized_search_model.best_params_["model__max_depth"],
+            "n_estimators": randomized_search_model.best_params_["model__n_estimators"],
+            "min_samples_split": randomized_search_model.best_params_[
+                "model__min_samples_split"
+            ],
+            "max_features": randomized_search_model.best_params_["model__max_features"],
+            "min_samples_leaf": randomized_search_model.best_params_[
+                "model__min_samples_leaf"
+            ],
+            "criterion": randomized_search_model.best_params_["model__criterion"],
+            "random_state": randomized_search_model.best_params_["model__random_state"],
+            "class_weight": randomized_search_model.best_params_["model__class_weight"],
+        }
+
         rf_model = RandomForestClassifier()
-        rf_model.set_params(**randomized_search_model.best_params_)
+        rf_model.set_params(**best_params)
 
         print(f"Randomized search parameters: {randomized_search_model.best_params_}")
 
     else:
         rf_model = RandomForestClassifier(
-            n_estimators=700,
+            n_estimators=512,
             min_samples_split=4,
             min_samples_leaf=1,
             max_features="auto",
@@ -226,7 +234,7 @@ def main(randomized_search=False):
         rf_model.predict_proba(X_test.drop(columns=["sample_weight"]))[:, 1]
     )
 
-    thresholds_list = list(np.arange(0.00, 1.05, 0.005))
+    thresholds_list = list(np.arange(0.00, 1.05, 0.05))
     evaluation_metrics_df = evaluate_model(
         calibrated_rf_test_predictions,
         X_test.drop(columns=["sample_weight"]),

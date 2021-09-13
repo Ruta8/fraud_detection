@@ -47,12 +47,7 @@ def perform_randomized_search(
         remainder="passthrough",
     )
 
-    model_pipeline = Pipeline(
-        steps=[
-            ("encoder", encoder),
-            ("model", model),
-        ]
-    )
+    model_pipeline = Pipeline(steps=[("encoder", encoder), ("model", model),])
 
     randomized_search_model = RandomizedSearchCV(
         model_pipeline,
@@ -151,10 +146,9 @@ def choose_threshold(
        threshold (float): the optimal threshold to maximise recall given max_case_coverage.
 
     """
-    assert len(y_true) == len(
-        y_pred_proba
-    ), "y_true and y_pred_proba of unequal length (%d and %d)" % len(
-        y_true, len(y_pred_proba)
+    assert len(y_true) == len(y_pred_proba), (
+        "y_true and y_pred_proba of unequal length (%d and %d)"
+        % len(y_true, len(y_pred_proba))
     )
 
     threshold = 0.5
